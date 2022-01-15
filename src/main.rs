@@ -1,22 +1,16 @@
-use std::env;
-use std::fs::File;
-use std::io::Read;
+use rust_study::Config;
 
+use std::env;
+use std::io::Read;
+use std::process;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let query = &args[1];
-    let filename = &args[2];
-    println!("command {}", query);
-    println!("file name {}", filename);
+    let config = Config::new(&args).unwrap();
 
-    let mut file = File::open(filename)
-        .expect("File not found!");
-
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("Something went wrong reading to string!");
-
-    println!("With Text : \n{}", contents);
+    if let Err(e) = rust_study::run(config) {
+        println!("App error: {}", e);
+        process::exit(1);
+    }
 
 }
