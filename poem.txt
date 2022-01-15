@@ -1,0 +1,8 @@
+Hello, World!
+This is clear
+are you lear
+ls
+pwd
+cl
+clear
+ls
