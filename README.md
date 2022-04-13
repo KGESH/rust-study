@@ -1,10 +1,10 @@
-# Git Auto Commit
+# Git Auto Commit Target Example
 
 ---
 
 ## Description
 
-- ### Select to project, then change README.md file.
+- ### This repository is target for auto commit project
 
 ---
 
@@ -15,7 +15,7 @@
 
 ---
 
-## Sequence
+## Sequence (after change)
 
 ### 1. Execute this binary
 ### 2. Check project_repo_url.txt exist in directory
